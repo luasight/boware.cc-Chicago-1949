@@ -1,0 +1,76 @@
+----------- // Port Maersk // ----------- 
+---------------------------------------
+
+----- // Function 1 // -----
+
+----- // Function 2 // -----
+
+----- // Function 3 // -----
+
+----- // Function 4 // -----
+
+----------------------------------------------------------------------------------------------------------------------------------------
+----- // UI Stuff // -----
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/luasight/boware.cc-Libary/main/Main"))()
+----------------------------------------------------------------------------------------------------------------------------------------
+local Window = Library:New({Name = "boware.cc | 0.0.0 | Chicago 1949", Size = Vector2.new(497, 605), Accent = Color3.fromRGB(73, 82, 82)})
+----------------------------------------------------------------------------------------------------------------------------------------
+----- // Tabs // -----
+----------------------------------------------------------------------------------------------------------------------------------------
+local Aimbot = Window:Page({Name = "Aimbot"})
+local Visuals = Window:Page({Name = "Visuals"})
+local Player = Window:Page({Name = "Player"})
+local Teleports = Window:Page({Name = "Teleports"})
+local Miscellaneous = Window:Page({Name = "Miscellaneous"})
+local Settings = Window:Page({Name = "Settings"})
+--------------------------------------------------------------------------------------
+----- // Windows // -----
+--------------------------------------------------------------------------------------
+local A1 = Aimbot:Section({Name = "Window 1", Side = "Left"})
+--------------------------------------------------------------------------------------
+local B1 = Visuals:Section({Name = "Window 1", Side = "Left"})
+--------------------------------------------------------------------------------------
+local C1 = Player:Section({Name = "Window 1", Side = "Left"})
+--------------------------------------------------------------------------------------
+local Spawn_Locations = Teleports:Section({Name = "Spawn Locations", Side = "Left"})
+local Extra_Locations = Teleports:Section({Name = "Extra Locations", Side = "Right"})
+local Docks_Locations = Teleports:Section({Name = "Docks Locations", Side = "Left"})
+local Reactor_Locations = Teleports:Section({Name = "Reactor Locations", Side = "Right"})
+--------------------------------------------------------------------------------------
+local Stuff = Miscellaneous:Section({Name = "Stuff", Side = "Left"})
+--------------------------------------------------------------------------------------
+local Settings_Main = Settings:Section({Name = "Main", Side = "Left"})
+--------------------------------------------------------------------------------------
+
+--- // Tab A1 Window 1 // ---
+
+--- // Tab B1 Window 1 // ---
+
+--- // Tab C1 Window 1 // ---
+
+--- // Main Locations // ---
+Spawn_Locations:Button({Name = "Main Spawn Defenders", Default = false, Pointer = ""})
+Spawn_Locations:Button({Name = "Main Spawn Raiders", Default = false, Pointer = ""})
+Spawn_Locations:Button({Name = "Other Spawn Raiders", Default = false, Pointer = ""})
+--- // Extra Locations // ---
+Extra_Locations:Button({Name = "Landing Pad", Default = false, Pointer = ""})
+Extra_Locations:Button({Name = "Water Canal", Default = false, Pointer = ""}) 
+--- // Docks Locations // ---
+Docks_Locations:Button({Name = "Front Door", Default = false, Pointer = ""}) 
+Docks_Locations:Button({Name = "Side Door", Default = false, Pointer = ""}) 
+Docks_Locations:Button({Name = "Left Vent", Default = false, Pointer = ""}) 
+Docks_Locations:Button({Name = "Right Vent", Default = false, Pointer = ""}) 
+--- // Reactor Locations // ---
+Reactor_Locations:Button({Name = "Blast Door", Default = false, Pointer = ""})
+Reactor_Locations:Button({Name = "Left Vent", Default = false, Pointer = ""}) 
+Reactor_Locations:Button({Name = "Right Vent", Default = false, Pointer = ""}) 
+--- // Stuff // ---
+Stuff:Button({Name = "Open Sewer Door", Default = false, Pointer = ""})
+
+--- // Settings // ---
+
+Settings_Main:ConfigBox({})
+Settings_Main:ButtonHolder({Buttons = {{"Load", function() end}, {"Save", function() end}}})
+Settings_Main:Label({Name = "Unloading will fully unload\neverything, so save your\nconfig before unloading.", Middle = true})
+Settings_Main:Button({Name = "Unload", Callback = function() Window:Unload() end})
+Window:Initialize()
